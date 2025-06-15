@@ -1,15 +1,17 @@
-#include<stdio.h>
-int main(int argc, char const *argv[])
-{
-    int n, sum=0, a;
+#include <stdio.h>
+
+int main() {
+    int n,a, sum=0;
     printf("Enter a number: ");
     scanf("%d", &n);
-    for (int i = n; i>0; i=i/10)
+    while (n>0)
     {
-        a = i%10;
+        a=n%10;
         sum+=a;
+        n/=10;
     }
-    printf("The sum of the digits is: %d ", sum );
-     
+    printf("%d ", sum);
+    
+
     return 0;
 }
